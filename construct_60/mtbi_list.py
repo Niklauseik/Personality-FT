@@ -2,7 +2,7 @@ import json
 import csv
 
 # 读取 questions.txt（单行 JSON-like 数据）
-with open("questions.txt", "r", encoding="utf-8") as f:
+with open("datasets/questions.txt", "r", encoding="utf-8") as f:
     raw_data = f.read().strip()
 
 # 处理 HTML 转义字符（`&quot;` -> `"`）
