@@ -56,7 +56,7 @@ for i, row in df_sample.iterrows():
 df_sample["prediction"] = predictions
 
 # **保存预测结果 CSV**
-results_file = os.path.join(results_dir, "sentiment_with_predictions.csv")
+results_file = os.path.join(results_dir, "sentiment_results.csv")
 df_sample.to_csv(results_file, index=False)
 print(f"✅ Predictions saved to: {results_file}")
 

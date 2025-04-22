@@ -1,0 +1,40 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoint
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# Python virtual environments
+venv/
+env/
+.venv/
+ENV/
+*.env
+
+# Mac/Linux system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs and local debug info
+*.log
+*.tmp
+*.bak
+
+# Compiled C extensions
+*.so
+
+# Personal configs and API keys
+config.yaml
+
+# Ignore pipenv and poetry lock files if unused
+Pipfile.lock
+poetry.lock
