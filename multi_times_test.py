@@ -12,7 +12,7 @@ EARLY_STOP_COUNT = 15       # 出现次数达到此数值即提前停止
 # ✅ 目录设置
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(current_dir)
-from MBTI_test import run_mbti_test  # ✅ 调用测试函数
+from run_mbti_test import run_mbti_test  # ✅ 调用测试函数
 
 # ✅ 输入测试名称
 x = input("请输入测试名称（结果将存入 results/x 文件夹）： ").strip()
