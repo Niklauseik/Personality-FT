@@ -5,9 +5,9 @@ import collections
 import time
 
 # ✅ 配置模型相关参数（填这里）
-MODEL_TYPE = "deepseek"          # "gpt" 或 "deepseek"
-MODEL_NAME = "deepseek-chat"  # 模型名称（如 gpt-4o-mini 或 deepseek-chat）
-EARLY_STOP_COUNT = 15       # 出现次数达到此数值即提前停止
+MODEL_TYPE = "gpt"          # "gpt" 或 "deepseek"
+MODEL_NAME = "ft:gpt-4o-2024-08-06:personal:thinking-3000:BPOh2ica"  # 模型名称（如 gpt-4o-mini 或 deepseek-chat）
+EARLY_STOP_COUNT = 6       # 出现次数达到此数值即提前停止
 
 # ✅ 目录设置
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -16,7 +16,7 @@ from run_mbti_test import run_mbti_test  # ✅ 调用测试函数
 
 # ✅ 输入测试名称
 x = input("请输入测试名称（结果将存入 results/x 文件夹）： ").strip()
-NUM_TRIALS = 25
+NUM_TRIALS = 10
 RESULTS_DIR = f"results/{x}"
 os.makedirs(RESULTS_DIR, exist_ok=True)
 

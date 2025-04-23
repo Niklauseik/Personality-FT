@@ -79,4 +79,4 @@ def build_dpo_dataset(mbti_type: str, sample_size: int = 800):
 
 # ✅ 示例调用
 if __name__ == "__main__":
-    build_dpo_dataset("ENTJ", sample_size=700)
+    build_dpo_dataset("ENTJ", sample_size=1600)

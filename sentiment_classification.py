@@ -13,17 +13,20 @@ api_key = config_manager.get_api_key("openai")
 client = openai.OpenAI(api_key=api_key)
 
 # 替换为你的微调模型 ID
-fine_tuned_model = "gpt-4o-mini"
+fine_tuned_model = "gpt-4o"
 
 # 读取测试数据集
 test_file = "datasets/sentiment.csv"
 df = pd.read_csv(test_file)
 
-# **随机抽取 20 条测试数据**
-df_sample = df.sample(n=1173, random_state=42).reset_index(drop=True)
+# **随机抽取 n 条测试数据 数据集一共970**
+df_sample = df.sample(n=970, random_state=42).reset_index(drop=True)
 
-# 结果存储目录
-results_dir = "results/sentiment/no_ft_model_no_prompt"
+# 手动输入子文件夹名（例如：4o_thinking / entj / run_0423 等）
+folder_name = input("请输入结果子文件夹名（将创建在 sentiment/ 下）: ").strip()
+
+# 构建完整路径
+results_dir = os.path.join("results", "sentiment", folder_name)
 os.makedirs(results_dir, exist_ok=True)
 
 # 初始化预测列表
@@ -31,7 +34,7 @@ predictions = []
 
 # 遍历测试数据进行预测
 for i, row in df_sample.iterrows():
-    query = row["query"].strip()
+    text = row["text"].strip()
     true_label = row["answer"].strip()
 
     try:
@@ -39,8 +42,14 @@ for i, row in df_sample.iterrows():
         response = client.chat.completions.create(
             model=fine_tuned_model,
             messages=[
-                {"role": "system", "content": "You are a financial sentiment classifier. Respond with one word"},
-                {"role": "user", "content": query}
+                {"role": "system", "content": (
+                    "You are a financial sentiment classifier. "
+                    "Respond with only one word: either 'positive', 'neutral', or 'negative'."
+                )},
+                {"role": "user", "content": (
+                    "Analyze the sentiment of this statement extracted from a financial news article:\n"
+                    f"{text}"
+                )}
             ]
         )
         

@@ -3,7 +3,7 @@ import json
 import tiktoken
 
 # 修改为你的 DPO 文件路径
-DPO_FILE = "datasets/mbti_dpo/ENTJ_3200.jsonl"
+DPO_FILE = "datasets/mbti_dpo/thinking_3000.jsonl"
 
 # 选择 tokenizer（gpt-4 / gpt-4o / gpt-3.5 都用 cl100k_base）
 tokenizer = tiktoken.get_encoding("cl100k_base")

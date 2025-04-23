@@ -63,4 +63,4 @@ def build_decision_dpo(decision_type: str, sample_size: int = 800):
 
 # ✅ 示例调用
 if __name__ == "__main__":
-    build_decision_dpo("T", sample_size=3000)
+    build_decision_dpo("F", sample_size=1600)
