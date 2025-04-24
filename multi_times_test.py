@@ -6,7 +6,7 @@ import time
 
 # ✅ 配置模型相关参数（填这里）
 MODEL_TYPE = "gpt"          # "gpt" 或 "deepseek"
-MODEL_NAME = "ft:gpt-4o-2024-08-06:personal:thinking-3000:BPOh2ica"  # 模型名称（如 gpt-4o-mini 或 deepseek-chat）
+MODEL_NAME = "ft:gpt-4o-2024-08-06:personal:feeling-1600:BPS2rGJ6"  # 模型名称（如 gpt-4o-mini 或 deepseek-chat）
 EARLY_STOP_COUNT = 6       # 出现次数达到此数值即提前停止
 
 # ✅ 目录设置
