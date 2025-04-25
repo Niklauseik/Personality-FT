@@ -15,9 +15,9 @@ sys.path.append(current_dir)
 from run_mbti_test import run_mbti_test  # ✅ 调用测试函数
 
 # ✅ 输入测试名称
-x = input("请输入测试名称（结果将存入 results/x 文件夹）： ").strip()
+x = input("请输入测试名称（结果将存入 results/mbti/x 文件夹）： ").strip()
 NUM_TRIALS = 10
-RESULTS_DIR = f"results/{x}"
+RESULTS_DIR = f"results/mbti/{x}"
 os.makedirs(RESULTS_DIR, exist_ok=True)
 
 # ✅ 初始化
