@@ -19,7 +19,7 @@ MODEL_CONFIG = {
     }
 }
 
-MBTI_DATASET = "datasets/MBTI_doubled.json"
+MBTI_DATASET = "datasets/MBTI_test.json"
 
 def run_mbti_test(model_name, model_type="gpt"):
     """

@@ -13,7 +13,7 @@ api_key = config_manager.get_api_key("openai")
 client = openai.OpenAI(api_key=api_key)
 
 # 替换为你的微调模型 ID
-fine_tuned_model = "gpt-4o"
+fine_tuned_model = "ft:gpt-4o-2024-08-06:personal:feeling-1600-reversed:BQsGBsUO"
 
 # 读取测试数据集
 test_file = "datasets/sentiment.csv"

@@ -1,9 +1,9 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-data_set = "financial_analyst"
+data_set = "4o-feeling"
 # 读取测试结果文件
-results_file = f"datasets/results/sentiment/{data_set}/sentiment_with_predictions.csv"
+results_file = f"results/sentiment/{data_set}/sentiment_results.csv"
 df = pd.read_csv(results_file)
 
 # 转换为小写，确保一致性
@@ -35,7 +35,7 @@ for category in categories:
     }
 
 # 保存按类别计算的 Metrics
-metrics_file = f"datasets/results/sentiment/{data_set}/category_metrics.txt"
+metrics_file = f"results/sentiment/{data_set}/category_metrics.txt"
 with open(metrics_file, "w") as f:
     f.write(f"Overall Accuracy: {overall_accuracy:.4f}\n\n")
     for category, metrics in metrics_dict.items():
