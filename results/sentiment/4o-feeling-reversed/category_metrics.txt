@@ -1,0 +1,20 @@
+Overall Accuracy: 0.6495
+
+Category: Neutral
+Accuracy: 0.6598
+Precision: 0.9395
+Recall: 0.4575
+F1 Score: 0.6154
+
+Category: Positive
+Accuracy: 0.6918
+Precision: 0.4798
+Recall: 0.9422
+F1 Score: 0.6358
+
+Category: Negative
+Accuracy: 0.9608
+Precision: 0.7955
+Recall: 0.9052
+F1 Score: 0.8468
+

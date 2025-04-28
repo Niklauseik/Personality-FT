@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
-data_set = "4o-feeling"
+data_set = "fiqa-4o-thinking"
 # 读取测试结果文件
 results_file = f"results/sentiment/{data_set}/sentiment_results.csv"
 df = pd.read_csv(results_file)
