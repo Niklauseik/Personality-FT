@@ -1,0 +1,15 @@
+Dataset: german_400
+Accuracy: 0.48
+Precision: 0.4952
+Recall: 0.4944
+F1 Score: 0.468
+
+Dataset: convfinqa_300
+Accuracy: 0.5067
+
+Dataset: cfa_1000
+Accuracy: 0.85
+Precision: 0.3666
+Recall: 0.3644
+F1 Score: 0.3648
+
