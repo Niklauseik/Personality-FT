@@ -38,3 +38,13 @@ config.yaml
 # Ignore pipenv and poetry lock files if unused
 Pipfile.lock
 poetry.lock
+
+# === LLaMA 3 模型与下载 ===
+llama3_8b_full/
+llama3_8b.zip
+llama3_8b.tar.gz
+llama3_3b.tar.gz
+download_llama.py
+verify_zip.py
+llama3_3b_full/
+llama3_3b_instruct/
