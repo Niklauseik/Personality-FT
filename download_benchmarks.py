@@ -9,7 +9,7 @@ os.makedirs("datasets", exist_ok=True)
 # 下载 GSM8K
 gsm8k = load_dataset("openai/gsm8k", "main", split="test")
 gsm8k_samples = []
-for item in gsm8k.select(range(800)):
+for item in gsm8k.select(range(1300)):
     question = item['question'].strip()
     answer = item['answer']
     # 抽取 #### 后的数字
@@ -26,7 +26,7 @@ for item in gsm8k.select(range(800)):
 # 下载 ARC-Easy
 arc_easy = load_dataset("allenai/ai2_arc", "ARC-Easy", split="test")
 arc_easy_samples = []
-for item in arc_easy.select(range(800)):
+for item in arc_easy.select(range(2000)):
     question = item['question'].strip()
     choices_text = item['choices']['text']
     choices_label = item['choices']['label']
@@ -41,7 +41,7 @@ for item in arc_easy.select(range(800)):
 # 下载 BoolQ
 boolq = load_dataset("google/boolq", split="train")
 boolq_samples = []
-for item in boolq.select(range(800)):
+for item in boolq.select(range(2000)):
     question = item['question'].strip()
     passage = item['passage'].strip()
     label = str(item['answer']).lower()  # true/false
@@ -52,8 +52,8 @@ for item in boolq.select(range(800)):
     })
 
 # 将数据保存成csv
-pd.DataFrame(gsm8k_samples).to_csv("datasets/gsm8k_test800.csv", index=False, encoding="utf-8")
-pd.DataFrame(arc_easy_samples).to_csv("datasets/arc_easy_test800.csv", index=False, encoding="utf-8")
-pd.DataFrame(boolq_samples).to_csv("datasets/boolq_train800.csv", index=False, encoding="utf-8")
+pd.DataFrame(gsm8k_samples).to_csv("datasets/gsm8k_test1300.csv", index=False, encoding="utf-8")
+pd.DataFrame(arc_easy_samples).to_csv("datasets/arc_easy_test2000.csv", index=False, encoding="utf-8")
+pd.DataFrame(boolq_samples).to_csv("datasets/boolq_train2000.csv", index=False, encoding="utf-8")
 
 print("✅ 数据集下载和处理完成，已储存到 datasets 文件夹！")
